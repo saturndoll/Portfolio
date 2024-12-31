@@ -25,10 +25,10 @@ function Header() {
         />
       )}
       <ul className={`${showHeader ? "show-header" : "hide-header"} n-box1`}>
-        <li className={`${path=='/' && 'active' }`}>
+        <li className={`${path==='/' && 'active' }`}>
           <Link to="/">Home</Link>
         </li>
-        <li className={`${path=='/projects' && 'active' }`}>
+        <li className={`${path==='/projects' && 'active' }`}>
           <Link to="projects">Projects</Link>
         </li>
         {/* <li className={`${path=='/contact' && 'active' }`}>
