@@ -1,0 +1,78 @@
+.carousel-parent {
+  height: 100vh;
+  background-color: #d7bcfd;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: gallery 20s linear infinite;
+}
+
+.gallery:hover {
+  animation-play-state: paused;
+}
+
+.gallery:hover svg {
+    opacity: 0.2;
+}
+
+.gallery span {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+  transition: all 1s;
+
+}
+
+/* .gallery span .reflection {
+    position: absolute;
+    top: 100%; 
+    height: 50%; 
+    width: 100%;
+    transform: scaleY(-1); 
+    opacity: 0.2; 
+    filter: blur(2px); 
+    pointer-events: none; 
+    overflow: hidden; 
+    clip-path: inset(50% 0 0 0);
+  } */
+
+.gallery span svg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+  transition: all 1s;
+
+}
+
+.gallery span svg:hover {
+  cursor: pointer;
+  transition: all 1s;
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+@keyframes gallery {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}

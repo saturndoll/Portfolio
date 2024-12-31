@@ -1,0 +1,158 @@
+.menu-icon {
+  color: blueviolet;
+  font-size: 70px;
+  margin: 20px;
+  z-index: 2;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.show-header {
+  color: rebeccapurple;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.95;
+  height: 65vh;
+  width: 50%;
+  border-bottom-left-radius: 50%;
+  transition: all 0.5s;
+  z-index: 2;
+}
+
+.hide-header {
+  color: rebeccapurple;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  height: 0;
+  width: 0;
+  transition: all 0.5s;
+}
+
+ul li {
+  color: rebeccapurple;
+  list-style: none;
+  margin-top: 25px;
+}
+
+ul a {
+  color: rebeccapurple;
+  text-decoration: none;
+}
+
+.active {
+  border: 3px solid darkmagenta;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.active a {
+  color: darkmagenta;
+  font-weight: bold;
+}
+
+.contact{
+  padding-top: 50px;
+}
+
+.contact img {
+  height: 50vh;
+  width: 70%;
+}
+
+.contact-form .primary-button {
+  background-color: #d7bcfd;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  margin-top: 20px;
+  border-radius: 20px !important;
+  border: 1px solid black !important;
+  background: #ffffff;
+  box-shadow: 5px 5px 0px #e8e8e8, -5px -5px 0px #ffffff;
+}
+
+.form-control:focus{
+  transform: scale(1.05);
+}
+
+.footer-content{
+  background-color: #d7bcfd;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+
+.footer-icons:hover{
+  color: darkmagenta;
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+@media (max-width: 750px) {
+  .show-header {
+    color: rebeccapurple;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.95;
+    height: 100vh;
+    width: 100%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-left: 5px solid rgba(255, 255, 255, 0.488);
+    transition: width 0.5s;
+    z-index: 2;
+  }
+
+  .hide-header {
+    color: rebeccapurple;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    height: 0;
+    width: 0;
+    transition: all 0s;
+  }
+
+  .menu-icon {
+    color: blueviolet;
+    font-size: 45px;
+  }
+
+  .contact{
+    margin-top: 0 !important;
+    padding: 0 !important;
+  }
+
+  .contact-form{
+    padding: 15px !important;
+    margin: 15px !important;
+  } 
+}
